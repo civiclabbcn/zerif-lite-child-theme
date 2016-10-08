@@ -1,0 +1,99 @@
+/*
+Theme Name: Zerif Lite Child
+Theme URI: None
+Author: CivicLabBarcelona
+Author URI: http://civiclab.cat
+Template: zerif-lite
+Version: 1.0
+License: GNU General Public License version 3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Description: A child theme of the Zerif LITE themeisle theme
+Text Domain: zerif-lite-child
+Domain Path: /languages/
+Tags: one-column, two-columns, right-sidebar,front-page-post-form,full-width-template,rtl-language-support,sticky-post,theme-options, custom-background, custom-menu, editor-style, featured-images, threaded-comments, translation-ready, footer-widgets, portfolio
+*/
+
+/*
+Top menu
+*/
+
+.menu-item {
+  font-weight: lighter;
+  text-transform: capitalize;
+}
+
+/*
+Team section
+*/
+
+.team-member .details {
+  height: auto;
+}
+
+.about-us p {
+  font-size: 16px;
+  color: white;
+}
+
+.about-us .section-legend {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+/*
+Sections coloring
+*/
+
+section.latest-news {
+  background: #272727;
+  color: white;
+}
+
+section.latest-news .section-header h2.dark-text {
+  color: white;
+}
+
+.carousel .item .latestnews-box {
+  margin-bottom: 50px;
+}
+
+/* this is pretty terrible practice, ids in CSS ew */
+#carousel-homepage-latestnews .carousel-inner .item .latestnews-title a,
+.carousel .item .latestnews-box p {
+  color: white;
+}
+
+.carousel-control .glyphicon {
+  background: white;
+  border-radius: 5px;
+}
+
+/*
+Footer stuff
+*/
+
+@media (max-width: 767px){
+  footer {
+    padding-top: 0;
+  }
+}
+
+footer .company-details {
+  width: 100%;
+  padding: 40px 0 0 0;
+}
+
+footer .copyright {
+  width: 100%;
+  background: none;
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+footer .social {
+  margin-bottom: 0;
+}
+
+.social li a {
+  cursor: pointer;
+}
