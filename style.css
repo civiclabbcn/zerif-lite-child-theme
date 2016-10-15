@@ -14,12 +14,82 @@ Tags: one-column, two-columns, right-sidebar,front-page-post-form,full-width-tem
 */
 
 /*
+Azul: 0500d1
+Amarillo: fffa4a
+*/
+
+
+body {
+  font-family: 'Georgia', 'Times New Roman', 'serif';
+}
+
+a {
+  color: #0500d1;
+	-webkit-transition: all 100ms;
+	transition: all 100ms;
+}
+
+a:hover, a:focus, a:visited {
+  color: #0500d1;
+  text-decoration: underline;
+}
+
+::selection,
+p a,
+.entry-content p a,
+.widget li a,
+.entry-content ul li a {
+  background: #fffa4a;
+  color: #0500d1;
+}
+
+.entry-content p a:hover,
+.widget li a:hover,
+.entry-content ul li a:hover {
+  text-decoration: underline;
+}
+
+.entry-content p,
+.entry-content ul li {
+  font-family: 'Georgia', 'Times New Roman', 'serif';
+  font-size: 1.05em;
+  line-height: 1.5em;
+}
+
+/*
 Top menu
 */
 
-.menu-item {
+.menu-item,
+.widget li a {
+  color: #272727;
   font-weight: lighter;
   text-transform: capitalize;
+}
+
+ul.nav > li.current > a::before {
+  background: #0500d1;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li.current > a:hover,
+.navbar-inverse .navbar-nav ul.sub-menu li:hover > a {
+  color: #0500d1;
+  background: #fffa4a;
+  text-decoration: none;
+}
+
+ul.nav > li.current > a:before, .page ul.nav > li.current-menu-item > a:before, .single-post ul.nav > li.current-menu-item > a:before, .archive ul.nav > li.current-menu-item > a:before {
+  background: #0500d1;
+}
+
+.nav-links a {
+  background: #fffa4a;
+  color: #0500d1;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
 }
 
 /*
@@ -30,27 +100,82 @@ Team section
   height: auto;
 }
 
-.about-us p {
-  font-size: 16px;
-  color: white;
+.our-team .row > div:nth-child(4n+1) .red-border-bottom::before,
+.our-team .row > div:nth-child(4n+2) .red-border-bottom::before,
+.our-team .row > div:nth-child(4n+3) .red-border-bottom::before,
+.our-team .row > div:nth-child(4n+4) .red-border-bottom::before {
+  background: #0500d1;
 }
 
-.about-us .section-legend {
+/*
+First section with content
+*/
+
+.about-us {
+  background: rgb(249, 249, 249);
+  color: #272727;
+}
+
+.about-us h2,
+.about-us p {
+  color: #272727;
+}
+
+.about-us p {
+  font-size: 16px;
+}
+
+.about-us .section-header .section-legend {
   font-size: 20px;
   text-transform: capitalize;
+  color: #272727;
+}
+
+.our-clients {
+  display: none;
+}
+
+.client-list {
+  margin-bottom: 0;
+}
+
+.client-list ul li {
+  text-decoration: capitalize;
+}
+
+.client-list ul li a {
+  padding: 0 10px;
+  background: #fffa4a;
 }
 
 /*
 Sections coloring
 */
 
-section.latest-news {
-  background: #272727;
-  color: white;
+section {
+  border-bottom: #e8e8e8 1px solid;
 }
 
-section.latest-news .section-header h2.dark-text {
-  color: white;
+.focus, .works, .about-us, .features, .packages, .products,
+ .testimonial, .contact-us, .latest-news, .our-team {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.section-header {
+  padding-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+}
+
+section .content-left-wrap {
+  padding-top: 0;
+}
+
+section.our-team {
+  background: rgb(249, 249, 249);/*#272727;*/
 }
 
 .carousel .item .latestnews-box {
@@ -60,12 +185,38 @@ section.latest-news .section-header h2.dark-text {
 /* this is pretty terrible practice, ids in CSS ew */
 #carousel-homepage-latestnews .carousel-inner .item .latestnews-title a,
 .carousel .item .latestnews-box p {
-  color: white;
+/*  color: white;*/
 }
 
 .carousel-control .glyphicon {
-  background: white;
+/*  background: white;*/
   border-radius: 5px;
+}
+
+/*
+Blog section
+*/
+.entry-header h1.entry-title a {
+  color: #272727;
+}
+
+.entry-header h1.entry-title a:hover,
+.entry-footer a:hover {
+  color: #0500d1;
+}
+
+
+
+/*
+Contact us
+*/
+
+.contact-us .custom-button {
+  background: #0500d1;
+}
+
+.contact-us .custom-button:hover {
+  color: rgb(255, 255, 39);
 }
 
 /*
@@ -96,4 +247,29 @@ footer .social {
 
 .social li a {
   cursor: pointer;
+}
+
+/*
+Article stuff
+*/
+article .entry-header h1 {
+  font-size: 1.8em;
+  line-height: 1.2em;
+}
+
+.listpost-content-wrap h1.entry-title, .list-post-top h1.entry-title {
+  margin-bottom: 12px;
+}
+
+.entry-title:before {
+  background: #0500d1;
+}
+
+.entry-title:after {
+  background: #0500d1;
+  bottom: -9px;
+}
+
+.entry-meta {
+  margin-top: 20px;
 }
