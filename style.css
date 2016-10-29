@@ -43,6 +43,11 @@ p a,
   color: #0500d1;
 }
 
+::-moz-selection {
+  background: #fffa4a;
+  color: #0500d1;
+}
+
 .entry-content p a:hover,
 .widget li a:hover,
 .entry-content ul li a:hover {
@@ -50,7 +55,11 @@ p a,
 }
 
 .entry-content p,
-.entry-content ul li {
+.entry-content p span,
+.entry-content ul li,
+.entry-content ul li span,
+.entry-content ol li,
+.entry-content ol li span {
   font-family: 'Georgia', 'Times New Roman', 'serif';
   font-size: 1.05em;
   line-height: 1.5em;
@@ -59,6 +68,10 @@ p a,
 /*
 Top menu
 */
+
+header .navbar {
+  background: #fffa4a;
+}
 
 .menu-item,
 .widget li a {
@@ -71,16 +84,26 @@ ul.nav > li.current > a::before {
   background: #0500d1;
 }
 
+.navbar-inverse .navbar-nav>li.current>a {
+  color: #272727;
+}
+
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li.current > a:hover,
 .navbar-inverse .navbar-nav ul.sub-menu li:hover > a {
   color: #0500d1;
-  background: #fffa4a;
+  background: white;
   text-decoration: none;
+  padding: 0 5px;
 }
 
 ul.nav > li.current > a:before, .page ul.nav > li.current-menu-item > a:before, .single-post ul.nav > li.current-menu-item > a:before, .archive ul.nav > li.current-menu-item > a:before {
   background: #0500d1;
+}
+
+.navbar-brand img {
+  border: 1px solid #0500d1;
+  border-radius: 2px;
 }
 
 .nav-links a {
@@ -93,11 +116,38 @@ ul.nav > li.current > a:before, .page ul.nav > li.current-menu-item > a:before, 
 }
 
 /*
+Big titla
+*/
+.intro-text {
+  text-align: center;
+  color: #FFF;
+  line-height: 65px;
+  z-index: 0;
+  text-transform: capitalize;
+  font-size: 48px;
+}
+
+.buttons > .red-btn {
+  color: #0500d1 !important;
+  background: white;
+}
+
+.buttons > .red-btn:hover {
+  color: #0500d1 !important;
+  background: #fffa4a;
+}
+
+
+/*
 Team section
 */
 
 .team-member .details {
   height: auto;
+}
+
+.team-member .position {
+  margin-top: 20px;
 }
 
 .our-team .row > div:nth-child(4n+1) .red-border-bottom::before,
@@ -131,6 +181,16 @@ First section with content
   color: #272727;
 }
 
+.about-us .col-md-12.zerif-rtl-big-title .big-intro,
+.about-us .col-md-12.zerif_about_us_center p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Georgia', 'Times New Roman', 'serif';
+  font-size: 1.2em;
+  line-height: 1.6em;
+  color: #272727;
+}
+
 .our-clients {
   display: none;
 }
@@ -140,7 +200,8 @@ First section with content
 }
 
 .client-list ul li {
-  text-decoration: capitalize;
+  text-transform: none;
+  display: block;
 }
 
 .client-list ul li a {
@@ -183,14 +244,30 @@ section.our-team {
 }
 
 /* this is pretty terrible practice, ids in CSS ew */
-#carousel-homepage-latestnews .carousel-inner .item .latestnews-title a,
-.carousel .item .latestnews-box p {
-/*  color: white;*/
+#carousel-homepage-latestnews .carousel-inner .item .latestnews-title a:hover {
+  color: #0500d1;
+  background: #fffa4a;
+  text-decoration: none;
+}
+
+#carousel-homepage-latestnews .item .latestnews-box:nth-child(4n+1) .latestnews-title a::before,
+#carousel-homepage-latestnews .item .latestnews-box:nth-child(4n+2) .latestnews-title a::before,
+#carousel-homepage-latestnews .item .latestnews-box:nth-child(4n+3) .latestnews-title a::before,
+#carousel-homepage-latestnews .item .latestnews-box:nth-child(4n+4) .latestnews-title a::before {
+  background: #0500d1;
 }
 
 .carousel-control .glyphicon {
 /*  background: white;*/
   border-radius: 5px;
+}
+
+.latesnews-content p {
+  font-family: 'Georgia', 'Times New Roman', 'serif';
+	color: #272727;
+  text-align: left;
+  font-size: 1.1em;
+  line-height: 1.5em;
 }
 
 /*
@@ -212,16 +289,23 @@ Contact us
 */
 
 .contact-us .custom-button {
-  background: #0500d1;
+  background: #fffa4a;
+  color: #0500d1 !important;
+  border: 1px solid #0500d1;
 }
 
 .contact-us .custom-button:hover {
-  color: rgb(255, 255, 39);
+  background: white;
 }
 
 /*
 Footer stuff
 */
+
+footer {
+  background: white;
+  font-family: 'Georgia', 'Times New Roman', 'serif';
+}
 
 @media (max-width: 767px){
   footer {
@@ -232,6 +316,24 @@ Footer stuff
 footer .company-details {
   width: 100%;
   padding: 40px 0 0 0;
+}
+
+footer .company-details a {
+  color: white;
+  cursor: pointer;
+  font-size: .8em;
+}
+
+footer .company-details a:hover {
+  color: #fffa4a;
+}
+
+footer .company-details .icon-top i {
+  color: #fff;
+}
+
+footer .company-details .icon-top i:hover {
+  color: #fffa4a;
 }
 
 footer .copyright {
@@ -247,6 +349,11 @@ footer .social {
 
 .social li a {
   cursor: pointer;
+  color: white;
+}
+
+.social li a:hover {
+  color: #fffa4a;
 }
 
 /*
@@ -272,4 +379,23 @@ article .entry-header h1 {
 
 .entry-meta {
   margin-top: 20px;
+}
+
+/*
+Forms on pages
+*/
+
+.nf-form-cont {
+  font-family: 'Georgia', 'Times New Roman', 'serif';
+  line-height: 1.5em;
+}
+
+.field-wrap input[type="button"] {
+  background: #fffa4a;
+  color: #0500d1;
+  border: 1px solid #0500d1;
+}
+
+.field-wrap input[type="button"]:hover {
+  background: white;
 }

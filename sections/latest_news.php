@@ -56,7 +56,7 @@
 
 										echo '<div class="col-sm-3 latestnews-box">';
 
-											echo '<div class="latestnews-img">';
+											/*echo '<div class="latestnews-img">';
 
 												echo '<a class="latestnews-img-a" href="'.esc_url( get_permalink() ).'" title="'.esc_attr( get_the_title() ).'">';
 
@@ -68,7 +68,7 @@
 
 												echo '</a>';
 
-											echo '</div>';
+											echo '</div>';*/
 
 											echo '<div class="latesnews-content">';
 
@@ -98,13 +98,13 @@
 									echo '<div class="item '.$active.'">';
 										echo '<div class="col-md-3 latestnews-box">';
 											echo '<div class="latestnews-img">';
-												echo '<a class="latestnews-img-a" href="'.get_permalink().'" title="'.get_the_title().'">';
+												/*echo '<a class="latestnews-img-a" href="'.get_permalink().'" title="'.get_the_title().'">';
 													if ( has_post_thumbnail() ) :
 														the_post_thumbnail();
 													else:
 														echo '<img src="'.esc_url( get_template_directory_uri() ).'/images/blank-latestposts.png" alt="'.esc_attr( get_the_title() ).'" />';
 													endif;
-												echo '</a>';
+												echo '</a>';*/
 											echo '</div>';
 											echo '<div class="latesnews-content">';
 												echo '<h3 class="latestnews-title"><a href="'.esc_url( get_permalink() ).'" title="'.esc_attr( get_the_title() ).'">'.wp_kses_post( get_the_title() ).'</a></h3>';

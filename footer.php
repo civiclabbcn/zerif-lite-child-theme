@@ -24,7 +24,8 @@
 			$zerif_address_icon = get_theme_mod('zerif_address_icon',get_template_directory_uri().'/images/map25-redish.png');
 
 			$zerif_email = get_theme_mod('zerif_email','<a href="mailto:contact@site.com">contact@site.com</a>');
-			$zerif_email_icon = get_theme_mod('zerif_email_icon',get_template_directory_uri().'/images/envelope4-green.png');
+			$zerif_email_icon = get_theme_mod('zerif_email_icon',get_stylesheet_directory_uri().'/images/mail.png');
+			/*$zerif_email_icon = get_theme_mod('zerif_email_icon',get_template_directory_uri().'/images/envelope4-green.png');*/
 
 			$zerif_phone = get_theme_mod('zerif_phone','<a href="tel:0 332 548 954">0 332 548 954</a>');
 			$zerif_phone_icon = get_theme_mod('zerif_phone_icon',get_template_directory_uri().'/images/telephone65-blue.png');
@@ -58,7 +59,7 @@
 			if( $footer_sections == 1 ):
 				$footer_class = 'col-md-12';
 			elseif( $footer_sections == 2 ):
-				$footer_class = 'col-md-6';
+				$footer_class = 'col-md-12';
 			elseif( $footer_sections == 3 ):
 				$footer_class = 'col-md-4';
 			elseif( $footer_sections == 4 ):
@@ -96,7 +97,8 @@
 
 						if( !empty($zerif_email_icon) ) {
 							echo '<div class="icon-top green-text">';
-								echo '<img src="'.esc_url($zerif_email_icon).'" alt="" />';
+								/*echo '<img src="'.esc_url($zerif_email_icon).'" alt="" />';*/
+								echo '<i class="fa fa-envelope"></i>';
 							echo '</div>';
 						}
 						if( !empty($zerif_email) ) {
@@ -163,6 +165,9 @@
 							if( !empty($zerif_socials_instagram) ):
 								echo '<li><a'.$attribut_new_tab.' href="'.esc_url($zerif_socials_instagram).'"><i class="fa fa-instagram"></i></a></li>';
 							endif;
+								echo '<li><a'.$attribut_new_tab.' href="https://github.com/civiclabbcn"><i class="fa fa-github"></i></a></li>';
+								echo '<li><a'.$attribut_new_tab.' href="https://vimeo.com/civiclabbarcelona"><i class="fa fa-vimeo"></i></a></li>';
+								echo '<li><a'.$attribut_new_tab.' href="https://medium.com/@civiclab_bcn"><i class="fa fa-medium"></i></a></li>';
 							echo '</ul>';
 						endif;
 
